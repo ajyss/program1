@@ -6,13 +6,13 @@ class Mahasiswa:
         self.nim = nim
         self.nilai = nilai
 
-    @classmethod
+  
     def tambah_data(cls, nama, nim, nilai):
         mahasiswa_baru = Mahasiswa(nama, nim, nilai)
         cls.daftar_mahasiswa.append(mahasiswa_baru)
         print(f"Data {nama} berhasil ditambahkan.")
 
-    @classmethod
+    
     def hapus_data(cls, nim):
         for mahasiswa in cls.daftar_mahasiswa:
             if mahasiswa.nim == nim:
@@ -21,7 +21,7 @@ class Mahasiswa:
                 return
         print(f"Data dengan NIM {nim} tidak ditemukan.")
 
-    @classmethod
+    
     def ubah_data(cls, nim, nama_baru=None, nilai_baru=None):
         for mahasiswa in cls.daftar_mahasiswa:
             if mahasiswa.nim == nim:
@@ -33,7 +33,7 @@ class Mahasiswa:
                 return
         print(f"Data dengan NIM {nim} tidak ditemukan.")
 
-    @classmethod
+    
     def tampilkan_data(cls):
         if not cls.daftar_mahasiswa:
             print("Tidak ada data mahasiswa.")
